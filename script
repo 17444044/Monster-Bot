@@ -710,8 +710,8 @@
 
     themeCommand.prototype.functionality = function() {
       var msg;
-      msg = "Any type of Music is allowed here. ";
-      msg += "";
+      msg = "Any type of Bass Music is allowed here. Including Dubstep, Complextro, Drum and Bass, ";
+      msg += "Garage, Breakbeat, Hardstyle, Moombahton, HEAVY EDM, House, Electro, and Trance!!";
       return API.sendChat(msg);
     };
 
@@ -761,10 +761,10 @@
 
     roomHelpCommand.prototype.functionality = function() {
       var msg1, msg2;
-      msg1 = "Welcome to the All ~ Let's Dance ! ~ß [ENG/FRA] Create a playlist and populate it with songs from either YouTube or Soundcloud.  ";
-      msg1 += "Click the 'Join Waitlist' button and wait your turn to play music. Any music is allowed here.";
+      msg1 = "Welcome to the Dubstep Den! Create a playlist and populate it with songs from either YouTube or Soundcloud.  ";
+      msg1 += "Click the 'Join Waitlist' button and wait your turn to play music. Most electronic music allowed, type '/theme' for specifics.";
       msg2 = "Stay active while waiting to play your song or I'll remove you.  Play good quality music that hasn't been played recently (check room history).  ";
-      msg2 += "Avoid over played artists to stand out. Ask a mod if you're unsure about your song choice";
+      msg2 += "Avoid over played artists like Skrillex. Ask a mod if you're unsure about your song choice";
       API.sendChat(msg1);
       return setTimeout((function() {
         return API.sendChat(msg2);
@@ -1085,11 +1085,10 @@
     lockCommand.prototype.init = function() {
       this.command = '!lock';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'manager';
     };
 
     lockCommand.prototype.functionality = function() {
-      API.sendChat('Pop and lock dat ish');
       return data.lockBooth();
     };
 
@@ -1108,11 +1107,10 @@
     unlockCommand.prototype.init = function() {
       this.command = '!unlock';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer;
     };
 
     unlockCommand.prototype.functionality = function() {
-      API.sendChat('You\'ll never get the key to unlock my heart');
       return data.unlockBooth();
     };
 
@@ -1772,4 +1770,3 @@
   initialize();
 
 }).call(this);
-
