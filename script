@@ -1640,7 +1640,7 @@
     if (data.currentsong === null) {
       data.newSong();
     } else {
-      API.sendChat("/em: Just played " + data.currentsong.title + " by " + data.currentsong.author + ");
+      API.sendChat("/em: Just played " + data.currentsong.title + " by " + data.currentsong.author);
       data.newSong();
       document.getElementById("button-vote-positive").click();
     }
