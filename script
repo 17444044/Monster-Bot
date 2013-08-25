@@ -734,8 +734,8 @@
     rulesCommand.prototype.functionality = function() {
       var msg;
       msg = "1) Play good sound quality music. ";
-      msg += "2) Don't replay a song on the room history. 3) Max song limit 8 minutes. ";
-      msg += "4) DO NOT GO AWAY FROM KEYBOARD ON DECK! Please WOOT on DJ Booth and respect your fellow DJs!";
+      msg += "2) Avoid playing songs that are on the room history. 3) Max song limit 8 minutes. ";
+      msg += "4) Don't go afk on deck! Please WOOT on DJ Booth and respect your fellow DJs!";
       return API.sendChat(msg);
     };
 
@@ -1330,7 +1330,7 @@
 
     uservoiceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we\'ll get started on it: http://is.gd/IzP4bA';
+      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Tell it to us and we\'ll get started on it';
       msg += ' (please don\'t ask for mod)';
       return API.sendChat(msg);
     };
@@ -1377,7 +1377,7 @@
 
     whyMehCommand.prototype.functionality = function() {
       var msg;
-      msg = "Reserve Mehs for songs that are a) extremely overplayed b) off genre c) absolutely god awful or d) troll songs. ";
+      msg = "Reserve Mehs for songs that are a) extremely overplayed b) absolutely god awful or c) troll songs. ";
       msg += "If you simply aren't feeling a song, then remain neutral";
       return API.sendChat(msg);
     };
