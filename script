@@ -1133,10 +1133,9 @@
     };
 
     swapCommand.prototype.functionality = function() {
-      var msg, r, swapRegex, userAdd, userRemove, users;
+      var msg, r, swapRegex, userAdd, userRemove;
       msg = this.msgData.message;
       swapRegex = new RegExp("^/swap @(.+) for @(.+)$");
-      users = swapRegex.exec(msg).slice(1);
       r = new RoomHelper();
       if (users.length === 2) {
         userRemove = r.lookupUser(users[0]);
